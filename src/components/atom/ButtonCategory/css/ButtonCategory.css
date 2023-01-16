@@ -1,0 +1,8 @@
+.btn-dark{
+    background-color: var(--azul);
+    border-radius: 0px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+}
