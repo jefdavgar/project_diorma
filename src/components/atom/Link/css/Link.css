@@ -1,0 +1,13 @@
+a{
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    color: var(--blanco);
+}
+a:hover{
+    color: var(--morado);
+}
+a:active{
+    color: var(--rosa);
+}

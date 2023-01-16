@@ -7,3 +7,9 @@
     font-weight: 600;
     color: black;
 }
+.btn-primary:hover{
+    background-color: var(--morado);
+}
+.btn-primary:active{
+    background-color: var(--rosa) !important;
+}
