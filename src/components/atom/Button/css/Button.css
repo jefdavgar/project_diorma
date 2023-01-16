@@ -1,0 +1,9 @@
+.btn-primary{
+    background-color: var(--oro);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    color: black;
+}
