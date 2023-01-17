@@ -13,7 +13,7 @@ function Menu() {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#home"><Link text="DESCUBRE"></Link></Nav.Link>
+            <Nav.Link href="#home"><Link className="change-color" text="DESCUBRE"></Link></Nav.Link>
             <Nav.Link href="#home"><Link text="HISTORIA"></Link></Nav.Link>
             <Nav.Link href="#home"><Link text="PRODUCTOS"></Link></Nav.Link>
             <Nav.Link href="#home"><Link text="COLECCIÓN"></Link></Nav.Link>
