@@ -5,6 +5,7 @@ import Link from './components/atom/Link/Link'
 import ButtonProduct from './components/atom/ButtonProduct/ButtonProduct'
 import ButtonCategory from './components/atom/ButtonCategory/ButtonCategory'
 import QuantityButton from './components/atom/QuantityButton/QuantityButton'
+import CarouselProduct from './components/molecules/CarouselProduct/CarouselProduct'
 function App() {
   return (
     <div>
@@ -14,6 +15,7 @@ function App() {
         <ButtonProduct text="ver"></ButtonProduct>
         <ButtonCategory text="Hola"></ButtonCategory>
         <QuantityButton></QuantityButton>
+        <CarouselProduct></CarouselProduct>
     </div>
   )
 }
