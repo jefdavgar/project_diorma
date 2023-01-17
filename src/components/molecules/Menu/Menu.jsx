@@ -1,10 +1,13 @@
-import React from 'react'
-import NavLink from '../../atom/Link/Link'
+import NavLink from '../../atom/Link/NavLink'
+import { BrowserRouter as Router } from 'react-router-dom'
+
 const Menu = () => {
   return (
-    <div>
-        <NavLink text="MENU"></NavLink>
-    </div>
+    <Router>
+        <nav>
+          <NavLink text="Menu"></NavLink>
+        </nav>
+    </Router>
   )
 }
 
