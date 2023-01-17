@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Link from '../../atom/Link/Link';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/Menu.css"
 import logo from "../../../assets/img/logo/Logo_responsive.png"
 
@@ -15,7 +16,7 @@ function Menu() {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#home"><Link className="change-color" text="DESCUBRE"></Link></Nav.Link>
+            <Nav.Link href="#home"><Link text="DESCUBRE"></Link></Nav.Link>
             <Nav.Link href="#home"><Link text="HISTORIA"></Link></Nav.Link>
             <Nav.Link href="#home"><Link text="PRODUCTOS"></Link></Nav.Link>
             <Nav.Link href="#home"><Link text="COLECCIÓN"></Link></Nav.Link>
