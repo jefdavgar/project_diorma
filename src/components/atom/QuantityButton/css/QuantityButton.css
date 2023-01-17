@@ -1,0 +1,15 @@
+.container-content{
+    border: 1px solid black;
+    width: 98px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 14px;
+    row-gap: 13px;
+}
+.quantity{
+    border: none;
+    font-size: 28px;
+    background-color: var(--blanco);
+}
