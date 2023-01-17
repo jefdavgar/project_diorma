@@ -3,11 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Link from '../../atom/Link/Link';
 import "./css/Menu.css"
+import logo from "../../../assets/img/logo/Logo_responsive.png"
+
 function Menu() {
   return (
     <Navbar className='Navbar' expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={logo} alt="logo" /></Navbar.Brand>
         <Navbar.Toggle className='custom-button' aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
