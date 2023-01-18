@@ -1,0 +1,27 @@
+.Nav-Link{
+    margin-right: 44px !important;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.custom-Navbar{
+    margin-top: 13px;
+    background-color: var(--azul) !important;
+}
+.logo{
+    display: none;
+}
+.custom_two {
+    display: none;
+}
+
+@media screen and (min-width:540px) {
+    .logo{
+        display: block;
+    }
+    .custom_two{
+        display: block;
+    }
+    .img_arrow{
+        display: none;
+    }
+}
