@@ -5,10 +5,11 @@ import up from "../../../assets/img/icons/up.png"
 import logo from "../../../assets/img/logo/Logo_responsive.png"
 import Container from 'react-bootstrap/Container';
 import "./css/Footer.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {
   return (
-    <Container className='footer'>
+    <div className='container-fluid footer'>
         <div className='social'>
             <a href='#Instagram'>
                 <img src={instagram} alt=""/>
@@ -23,7 +24,7 @@ const Footer = () => {
         <a href='#home'>
             <img src={up} alt=""/>
         </a>
-    </Container>
+    </div>
   )
 }
 
