@@ -3,7 +3,6 @@ import instagram from "../../../assets/img/icons/INSTAGRAM.png"
 import whatsapp from "../../../assets/img/icons/WHATSAPP.png"
 import up from "../../../assets/img/icons/up.png"
 import logo from "../../../assets/img/logo/Logo_responsive.png"
-import Container from 'react-bootstrap/Container';
 import "./css/Footer.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,7 +20,7 @@ const Footer = () => {
         <a href='#home'>
             <img src={logo} alt="" />
         </a>
-        <a href='#home'>
+        <a href='#'>
             <img src={up} alt=""/>
         </a>
     </div>

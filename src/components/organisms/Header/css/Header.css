@@ -13,6 +13,13 @@
 .custom_two {
     display: none;
 }
+.name_section{
+    margin-left: auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    color: var(--blanco);
+}
 
 @media screen and (min-width:540px) {
     .logo{
@@ -22,6 +29,9 @@
         display: block;
     }
     .img_arrow{
+        display: none;
+    }
+    .name_section{
         display: none;
     }
 }

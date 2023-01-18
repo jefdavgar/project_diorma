@@ -1,8 +1,8 @@
 import "./App.css";
 import Home from "./components/pages/Home/Home";
-import Header from "./components/organisms/Header/Header";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Products from "./components/pages/Products/Products"
+import Cart from "./components/pages/Cart/Cart";
 function App() {
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
           <Route path="/historia" element={<Home/>} />
           <Route path="/colección" element={<Home/>} />
           <Route path="/products" element={<Products/>}/>
-
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
     </>
