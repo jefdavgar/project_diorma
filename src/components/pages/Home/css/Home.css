@@ -1,5 +1,27 @@
 .top{
-    margin-top: 250px;
-    width: 347px !important;
-    height: auto;
+    margin-top: 110px;
+    width: 100%;
+}
+.title{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+}
+.paragraph{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    text-align: justify !important;
+}
+.title-important{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    color: var(--morado) !important;
+}
+.title-important-2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    color: var(--oro) !important;
 }
