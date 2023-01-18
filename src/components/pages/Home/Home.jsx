@@ -1,18 +1,19 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/Home.css"
-import Header from "../../organisms/Header/Header"
 import Footer from "../../organisms/Footer/Footer"
 import imgDestacada from "../../../assets/img/products/tops/dorado.jpg"
 import { Container, Image } from "react-bootstrap";
 import CarouselProduct from "../../molecules/CarouselProduct/CarouselProduct"
 import Button from "../../atom/Button/Button"
+import { NavLink } from "react-router-dom"
+import Menu from "../../molecules/Menu/Menu";
 const Home = () => {
   return (
     <>
         <Container>
         <a name="home"/>
-          <Header></Header>
+          <Menu></Menu>
           <Image src={imgDestacada} alt="top-destacado" className="top"></Image>
           <a name="historia"/>
           <Container className="d-flex flex-column align-items-center">
@@ -31,7 +32,9 @@ const Home = () => {
           <CarouselProduct></CarouselProduct>
           <a name="colección"/>
           <Container className="d-flex flex-column align-items-center">
-            <Button text="VER COLECCIÓN"></Button>
+            <NavLink to="/products">
+              <Button text="VER COLECCIÓN"></Button>
+            </NavLink>
           </Container>
           <Container className="d-flex flex-column align-items-center">
             <h1 className="title-important">Elige tu accesorio</h1>
