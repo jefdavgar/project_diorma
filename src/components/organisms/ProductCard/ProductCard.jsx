@@ -17,140 +17,142 @@ const ProductCard = () => {
   return (
     <Container>
       <Image src={bannerbag} alt="top-destacado" className="bags"></Image>
-      <div className="row productCard">
-        <Container className=" col col-12">
-          <div className="row">
-            <Container className="d-flex align-items-center col col-5">
-              <Image
-                src={perlas_moradas}
-                alt="top-destacado"
-                className="imgProduct"
-              ></Image>
-            </Container>
-            <Container className="d-flex align-items-center col col-7">
-              <div className="row">
-                <h6 className="subtitle col col-12">Nombre del Producto</h6>
-                <p className="paragraph customParagraph">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </p>
-                <h6 className="subtitle col col-8">Valor del producto</h6>
-                <Container className="d-flex align-items-end col col-4">
-                  <NavLink to="/productdetail">
-                    <Button text="VER"></Button>
-                  </NavLink>
-                </Container>
-              </div>
-            </Container>
-          </div>
-        </Container>
-      </div>
-      <div className="row productCard">
-        <Container className=" col col-12">
-          <div className="row">
-            <Container className="d-flex align-items-center col col-5">
-              <Image
-                src={perlas_azules}
-                alt="top-destacado"
-                className="imgProduct"
-              ></Image>
-            </Container>
-            <Container className="d-flex align-items-center col col-7">
-              <div className="row">
-                <h6 className="subtitle col col-12">Nombre del Producto</h6>
-                <p className="paragraph customParagraph">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </p>
-                <h6 className="subtitle col col-8">Valor del producto</h6>
-                <Container className="d-flex align-items-end col col-4">
-                  <NavLink to="/productdetail">
-                    <Button text="VER"></Button>
-                  </NavLink>
-                </Container>
-              </div>
-            </Container>
-          </div>
-        </Container>
-      </div>
-      <div className="row productCard">
-        <Container className=" col col-12">
-          <div className="row">
-            <Container className="d-flex align-items-center col col-5">
-              <Image
-                src={perlas_verdes}
-                alt="top-destacado"
-                className="imgProduct"
-              ></Image>
-            </Container>
-            <Container className="d-flex align-items-center col col-7">
-              <div className="row">
-                <h6 className="subtitle col col-12">Nombre del Producto</h6>
-                <p className="paragraph customParagraph">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </p>
-                <h6 className="subtitle col col-8">Valor del producto</h6>
-                <Container className="d-flex align-items-end col col-4">
-                  <NavLink to="/productdetail">
-                    <Button text="VER"></Button>
-                  </NavLink>
-                </Container>
-              </div>
-            </Container>
-          </div>
-        </Container>
-      </div>
-      <div className="row productCard">
-        <Container className=" col col-12">
-          <div className="row">
-            <Container className="d-flex align-items-center col col-5">
-              <Image
-                src={perlas_blancas}
-                alt="top-destacado"
-                className="imgProduct"
-              ></Image>
-            </Container>
-            <Container className="d-flex align-items-center col col-7">
-              <div className="row">
-                <h6 className="subtitle col col-12">Nombre del Producto</h6>
-                <p className="paragraph customParagraph">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </p>
-                <h6 className="subtitle col col-8">Valor del producto</h6>
-                <Container className="d-flex align-items-end col col-4">
-                  <NavLink to="/productdetail">
-                    <Button text="VER"></Button>
-                  </NavLink>
-                </Container>
-              </div>
-            </Container>
-          </div>
-        </Container>
-      </div>
-      <div className="row productCard">
-        <Container className=" col col-12">
-          <div className="row">
-            <Container className="d-flex align-items-center col col-5">
-              <Image
-                src={perlas_doradas}
-                alt="top-destacado"
-                className="imgProduct"
-              ></Image>
-            </Container>
-            <Container className="d-flex align-items-center col col-7">
-              <div className="row">
-                <h6 className="subtitle col col-12">Nombre del Producto</h6>
-                <p className="paragraph customParagraph">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                </p>
-                <h6 className="subtitle col col-8">Valor del producto</h6>
-                <Container className="d-flex align-items-end col col-4">
-                  <NavLink to="/productdetail">
-                    <Button text="VER"></Button>
-                  </NavLink>
-                </Container>
-              </div>
-            </Container>
-          </div>
-        </Container>
+      <div className="product-cards-container">
+        <div className="row productCard">
+          <Container className=" col col-12">
+            <div className="row">
+              <Container className="d-flex align-items-center col col-5">
+                <Image
+                  src={perlas_moradas}
+                  alt="top-destacado"
+                  className="imgProduct"
+                ></Image>
+              </Container>
+              <Container className="d-flex align-items-center col col-7">
+                <div className="row">
+                  <h6 className="subtitle col col-12">Nombre del Producto</h6>
+                  <p className="paragraph customParagraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                  </p>
+                  <h6 className="subtitle col col-8">Valor del producto</h6>
+                  <Container className="d-flex align-items-end col col-4">
+                    <NavLink to="/productdetail">
+                      <Button text="VER"></Button>
+                    </NavLink>
+                  </Container>
+                </div>
+              </Container>
+            </div>
+          </Container>
+        </div>
+        <div className="row productCard">
+          <Container className=" col col-12">
+            <div className="row">
+              <Container className="d-flex align-items-center col col-5">
+                <Image
+                  src={perlas_azules}
+                  alt="top-destacado"
+                  className="imgProduct"
+                ></Image>
+              </Container>
+              <Container className="d-flex align-items-center col col-7">
+                <div className="row">
+                  <h6 className="subtitle col col-12">Nombre del Producto</h6>
+                  <p className="paragraph customParagraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                  </p>
+                  <h6 className="subtitle col col-8">Valor del producto</h6>
+                  <Container className="d-flex align-items-end col col-4">
+                    <NavLink to="/productdetail">
+                      <Button text="VER"></Button>
+                    </NavLink>
+                  </Container>
+                </div>
+              </Container>
+            </div>
+          </Container>
+        </div>
+        <div className="row productCard">
+          <Container className=" col col-12">
+            <div className="row">
+              <Container className="d-flex align-items-center col col-5">
+                <Image
+                  src={perlas_verdes}
+                  alt="top-destacado"
+                  className="imgProduct"
+                ></Image>
+              </Container>
+              <Container className="d-flex align-items-center col col-7">
+                <div className="row">
+                  <h6 className="subtitle col col-12">Nombre del Producto</h6>
+                  <p className="paragraph customParagraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                  </p>
+                  <h6 className="subtitle col col-8">Valor del producto</h6>
+                  <Container className="d-flex align-items-end col col-4">
+                    <NavLink to="/productdetail">
+                      <Button text="VER"></Button>
+                    </NavLink>
+                  </Container>
+                </div>
+              </Container>
+            </div>
+          </Container>
+        </div>
+        <div className="row productCard">
+          <Container className=" col col-12">
+            <div className="row">
+              <Container className="d-flex align-items-center col col-5">
+                <Image
+                  src={perlas_blancas}
+                  alt="top-destacado"
+                  className="imgProduct"
+                ></Image>
+              </Container>
+              <Container className="d-flex align-items-center col col-7">
+                <div className="row">
+                  <h6 className="subtitle col col-12">Nombre del Producto</h6>
+                  <p className="paragraph customParagraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                  </p>
+                  <h6 className="subtitle col col-8">Valor del producto</h6>
+                  <Container className="d-flex align-items-end col col-4">
+                    <NavLink to="/productdetail">
+                      <Button text="VER"></Button>
+                    </NavLink>
+                  </Container>
+                </div>
+              </Container>
+            </div>
+          </Container>
+        </div>
+        <div className="row productCard">
+          <Container className=" col col-12">
+            <div className="row">
+              <Container className="d-flex align-items-center col col-5">
+                <Image
+                  src={perlas_doradas}
+                  alt="top-destacado"
+                  className="imgProduct"
+                ></Image>
+              </Container>
+              <Container className="d-flex align-items-center col col-7">
+                <div className="row">
+                  <h6 className="subtitle col col-12">Nombre del Producto</h6>
+                  <p className="paragraph customParagraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                  </p>
+                  <h6 className="subtitle col col-8">Valor del producto</h6>
+                  <Container className="d-flex align-items-end col col-4">
+                    <NavLink to="/productdetail">
+                      <Button text="VER"></Button>
+                    </NavLink>
+                  </Container>
+                </div>
+              </Container>
+            </div>
+          </Container>
+        </div>
       </div>
     </Container>
   );
