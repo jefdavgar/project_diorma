@@ -4,8 +4,8 @@ import Header from '../../organisms/Header/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Image } from 'react-bootstrap';
 import ButtonCategory from '../../atom/ButtonCategory/ButtonCategory';
-import bannerbag from "../../../assets/img/banner/bannerbags.jpg"
 import "./css/Products.css"
+import ProductCard from '../../organisms/ProductCard/ProductCard';
 const Products = () => {
   return (
     <>
@@ -15,6 +15,7 @@ const Products = () => {
            <ButtonCategory text="Bolsos"></ButtonCategory>
            <ButtonCategory text="Tops"></ButtonCategory>
         </Container>
+        <ProductCard></ProductCard>
         <Footer></Footer>
     </>
   )
