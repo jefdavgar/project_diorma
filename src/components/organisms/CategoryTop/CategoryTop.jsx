@@ -6,12 +6,14 @@ import { Container, Image } from 'react-bootstrap';
 import ButtonCategory from '../../atom/ButtonCategory/ButtonCategory';
 import { NavLink } from 'react-router-dom';
 import TopList from '../../molecules/TopList/TopList';
-import bannerbag from "../../../assets/img/banner/bannerbags.jpg";
+import bannertops from "../../../assets/img/banner/bannertops.jpg";
+import imgcart from "../../../assets/img/icons/shopping_cart.png";
+import logo from "../../../assets/img/logo/Logo_responsive.png";
 
 const CategoryTop = () => {
   return (
     <>
-        <Header></Header>
+        <Header title="Colección" imgLogo={logo} imgNav={imgcart}></Header>
         <Container>
            <NavLink to="/product">
             <ButtonCategory text="Todo"></ButtonCategory>
@@ -24,7 +26,7 @@ const CategoryTop = () => {
            </NavLink>
         </Container>
         <Container>
-          <Image src={bannerbag} alt="top-destacado" className="bags"></Image>
+          <Image src={bannertops} alt="top-destacado" className="bags"></Image>
         </Container>
           <Container>
             <TopList/>

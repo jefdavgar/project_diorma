@@ -7,7 +7,7 @@ import top_plateado from "../../../assets/img/products/tops/plateado.jpg";
 import top_blanco from "../../../assets/img/products/tops/blanco.jpg";
 import top_rosado from "../../../assets/img/products/tops/rosado.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./css/TopList.css"
 
 const TopList = () => {
   const [products] = useState([
@@ -46,7 +46,7 @@ const CardTop = ({ product }) => {
                   <p className="paragraph customParagraph">{product.description}</p>
                   <h6 className="subtitle col col-7">{product.price}</h6>
                   <Container className="d-flex align-items-end col col-4">
-                    <NavLink to={`/topdetail/${product.id}`}>
+                    <NavLink to={`/product/topdetail/${product.id}`}>
                       <Button text="VER">
                       </Button>
                     </NavLink>

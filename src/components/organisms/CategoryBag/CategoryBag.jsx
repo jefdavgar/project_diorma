@@ -7,10 +7,13 @@ import ButtonCategory from '../../atom/ButtonCategory/ButtonCategory';
 import { NavLink } from 'react-router-dom';
 import bannerbag from "../../../assets/img/banner/bannerbags.jpg";
 import BagList from '../../molecules/BagList/BagList';
+import imgcart from "../../../assets/img/icons/shopping_cart.png";
+import logo from "../../../assets/img/logo/Logo_responsive.png";
+
 const CategoryBag = () => {
   return (
     <>
-        <Header></Header>
+        <Header title="Colección" imgLogo={logo} imgNav={imgcart}></Header>
         <Container>
            <NavLink to="/product">
             <ButtonCategory text="Todo"></ButtonCategory>

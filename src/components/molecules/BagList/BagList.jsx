@@ -48,7 +48,7 @@ const CardTop = ({ product }) => {
                   <p className="paragraph customParagraph">{product.description}</p>
                   <h6 className="subtitle col col-7">{product.price}</h6>
                   <Container className="d-flex align-items-end col col-4">
-                    <NavLink to={`/bagdetail/${product.id}`}>
+                    <NavLink to={`/product/bagdetail/${product.id}`}>
                       <Button text="VER">
                       </Button>
                     </NavLink>

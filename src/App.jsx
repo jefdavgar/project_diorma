@@ -15,12 +15,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/topdetail/:id" element={<TopDetail/>}/>
-          <Route path="/bagdetail/:id" element={<BagDetail/>}/>
-          <Route path="/home" element={<Home/>} />
-          <Route path="/descubre" element={<Home/>} />
-          <Route path="/historia" element={<Home/>} />
-          <Route path="/colección" element={<Home/>} />
+          <Route path="/product/topdetail/:id" element={<TopDetail/>}/>
+          <Route path="/product/bagdetail/:id" element={<BagDetail/>}/>
+          <Route path="/" element={<Home/>} />
           <Route path="/products" element={<Products/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/productdetail" element={<ProductDetail/>}/>

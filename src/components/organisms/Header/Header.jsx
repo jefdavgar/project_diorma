@@ -8,18 +8,18 @@ import "./css/Header.css"
 import img_arrow from "../../../assets/img/icons/back arrow.png"
 import imgcart from "../../../assets/img/icons/shopping_cart.png"
 
-const Header = () => {
+const Header = ({title ,imglogo, imgNav}) => {
   return (
     <Navbar className='custom-Navbar' expand="lg">
       <Container>
-        <NavLink to="/home" className="img_arrow"><img src={img_arrow} alt="logo" /></NavLink>
-        <NavLink to="/home" className="logo"><img src={logo} alt="logo" /></NavLink>
+        <NavLink to="/" className="img_arrow"><img src={img_arrow} alt="logo" /></NavLink>
+        <NavLink to="/" className="logo"><img src={imglogo} alt="logo" /></NavLink>
         <Nav className="me-auto name_section">
-            <h1>Colección</h1>
+            <h1>{title}</h1>
         </Nav>
         <Nav className="me-rigth">
            <NavLink to="/cart" className="img_arrow">
-             <img src={imgcart} alt="shopping_cart" />
+             <img src={imgNav} alt="shopping_cart" />
            </NavLink>
         </Nav>
         <Navbar.Toggle className='custom-button custom_two' aria-controls="basic-navbar-nav" />
@@ -27,10 +27,10 @@ const Header = () => {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <NavLink to="/home" className="Nav-Link"><Link text="DESCUBRE"></Link></NavLink>
-            <NavLink to="/home" className="Nav-Link"><Link text="HISTORIA"></Link></NavLink>
-            <NavLink to="/home" className="Nav-Link"><Link text="PRODUCTOS"></Link></NavLink>
-            <NavLink to="/home" className="Nav-Link"><Link text="COLECCIÓN"></Link></NavLink>
+            <NavLink to="/" className="Nav-Link"><Link text="DESCUBRE"></Link></NavLink>
+            <NavLink to="/" className="Nav-Link"><Link text="HISTORIA"></Link></NavLink>
+            <NavLink to="/" className="Nav-Link"><Link text="PRODUCTOS"></Link></NavLink>
+            <NavLink to="/" className="Nav-Link"><Link text="COLECCIÓN"></Link></NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
