@@ -3,22 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom';
 import Link from '../../atom/Link/Link';
-import logo from "../../../assets/img/logo/Logo_responsive.png"
 import "./css/Header.css"
 import img_arrow from "../../../assets/img/icons/back arrow.png"
-import imgcart from "../../../assets/img/icons/shopping_cart.png"
+import logo from "../../../assets/img/logo/Logo_responsive.png";
 
-const Header = ({title ,imglogo, imgNav}) => {
+const Header = ({title, imgNav, NavDirection}) => {
   return (
     <Navbar className='custom-Navbar' expand="lg">
       <Container>
-        <NavLink to="/" className="img_arrow"><img src={img_arrow} alt="logo" /></NavLink>
-        <NavLink to="/" className="logo"><img src={imglogo} alt="logo" /></NavLink>
+        <NavLink to="/product" className="img_arrow"><img src={img_arrow} alt="logo" /></NavLink>
+        <NavLink to="/" className="logo"><img src={logo} alt="logo" /></NavLink>
         <Nav className="me-auto name_section">
             <h1>{title}</h1>
         </Nav>
         <Nav className="me-rigth">
-           <NavLink to="/cart" className="img_arrow">
+           <NavLink to={NavDirection} className="img_arrow">
              <img src={imgNav} alt="shopping_cart" />
            </NavLink>
         </Nav>

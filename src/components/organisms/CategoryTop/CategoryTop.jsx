@@ -8,12 +8,11 @@ import { NavLink } from 'react-router-dom';
 import TopList from '../../molecules/TopList/TopList';
 import bannertops from "../../../assets/img/banner/bannertops.jpg";
 import imgcart from "../../../assets/img/icons/shopping_cart.png";
-import logo from "../../../assets/img/logo/Logo_responsive.png";
 
 const CategoryTop = () => {
   return (
     <>
-        <Header title="Colección" imgLogo={logo} imgNav={imgcart}></Header>
+        <Header title="Colección" imgNav={imgcart} NavDirection="/cart"></Header>
         <Container>
            <NavLink to="/product">
             <ButtonCategory text="Todo"></ButtonCategory>

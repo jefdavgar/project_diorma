@@ -11,12 +11,11 @@ import bannertops from "../../../assets/img/banner/bannertops.jpg";
 import BagList from "../../molecules/BagList/BagList";
 import "./css/CategoryAll.css";
 import imgcart from "../../../assets/img/icons/shopping_cart.png";
-import logo from "../../../assets/img/logo/Logo_responsive.png";
 
 const CategoryAll = () => {
   return (
     <>
-      <Header title="Colección" imgLogo={logo} imgNav={imgcart}></Header>
+      <Header title="Colección" imgNav={imgcart} NavDirection="/cart"></Header>
       <Container>
         <NavLink to="/product">
           <ButtonCategory text="Todo"></ButtonCategory>

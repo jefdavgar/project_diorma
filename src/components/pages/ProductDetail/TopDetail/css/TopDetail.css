@@ -1,0 +1,17 @@
+#dropdown-basic-button{
+    background-color: var(--morado) !important;
+}
+.content_store{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+.dropbutton{
+    color:  var(--azul) !important ;
+}
+@media screen and (min-width:281px) {
+    .content_store{
+        flex-direction: row !important;
+    }
+}
