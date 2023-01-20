@@ -7,14 +7,16 @@ import ProductDetail from "./components/pages/ProductDetail/ProductDetail";
 import CategoryAll from "./components/organisms/CategoryAll/CategoryAll";
 import CategoryBag from "./components/organisms/CategoryBag/CategoryBag";
 import CategoryTop from "./components/organisms/CategoryTop/CategoryTop";
-import TopList from "./components/molecules/TopList/TopList";
 import TopDetail from "./components/pages/ProductDetail/TopDetail/TopDetail";
+import BagDetail from "./components/pages/ProductDetail/BagDetail/BagDetail";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/topdetail/:id" element={<TopDetail/>}/>
+          <Route path="/bagdetail/:id" element={<BagDetail/>}/>
           <Route path="/home" element={<Home/>} />
           <Route path="/descubre" element={<Home/>} />
           <Route path="/historia" element={<Home/>} />

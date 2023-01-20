@@ -2,11 +2,11 @@ import React from 'react'
 import Footer from '../../organisms/Footer/Footer'
 import Header from "../../organisms/Header/Header"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
 import ButtonCategory from '../../atom/ButtonCategory/ButtonCategory';
-import ProductCard from '../../molecules/ProductCard/ProductCard';
 import { NavLink } from 'react-router-dom';
-
+import bannerbag from "../../../assets/img/banner/bannerbags.jpg";
+import BagList from '../../molecules/BagList/BagList';
 const CategoryBag = () => {
   return (
     <>
@@ -22,7 +22,12 @@ const CategoryBag = () => {
             <ButtonCategory text="Tops"></ButtonCategory>
            </NavLink>
         </Container>
-        <ProductCard></ProductCard>
+        <Container>
+          <Image src={bannerbag} alt="top-destacado" className="bags"></Image>
+        </Container>
+          <Container>
+            <BagList/>
+          </Container>
         <Footer></Footer>
     </>
   )
