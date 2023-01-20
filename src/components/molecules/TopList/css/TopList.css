@@ -34,9 +34,9 @@
 }
 @media screen and (min-width:540px) {
     .product-cards-container {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: space-between !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
     .productCard{
         background-color: var(--azul);
