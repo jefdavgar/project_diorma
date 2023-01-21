@@ -19,6 +19,7 @@ const TopDetail = () => {
     {
       id: 1,
       nameProduct: "Product 1",
+      color: "Dorado",
       imgProduct: top_dorado,
       price: "$10",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -26,6 +27,7 @@ const TopDetail = () => {
     {
       id: 2,
       nameProduct: "Product 2",
+      color: "Plateado",
       imgProduct: top_plateado,
       price: "$20",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -33,6 +35,7 @@ const TopDetail = () => {
     {
       id: 3,
       nameProduct: "Product 3",
+      color: "Rosado",
       imgProduct: top_rosado,
       price: "$30",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -40,6 +43,7 @@ const TopDetail = () => {
     {
       id: 4,
       nameProduct: "Product 4",
+      color: "Blanco",
       imgProduct: top_blanco,
       price: "$40",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -58,7 +62,9 @@ const TopDetail = () => {
       alert("Seleccione el tamaño");
       setMiVariable(false);
     } else {
-      const confirmResult = window.confirm(`Desea comprar ${product.nameProduct} con tamaño ${selectedOption}? `);
+      const confirmResult = window.confirm(
+        `Desea comprar ${product.nameProduct} con tamaño ${selectedOption} y color ${product.color}? `
+      );
       if (confirmResult) {
         setButtonDrop(false);
         setMiVariable(true);
@@ -70,7 +76,8 @@ const TopDetail = () => {
       <Header
         title="Producto"
         imgNav={product_menu}
-        NavDirection="/product"
+        NavDirection="/"
+        Navlink="/product"
       ></Header>
       <Container>
         <Image
@@ -93,29 +100,41 @@ const TopDetail = () => {
               nisi ut aliquip ex ea commodo consequat incididunt ut labore.
             </p>
           </div>
-          {buttonDrop && <DropdownButton
-            id="dropdown-basic-button"
-            title="Tamaño"
-            onSelect={(eventKey) => setSelectedOption(eventKey)}
-          >
-            <Dropdown.Item eventKey="Pequeño" className="dropbutton">Pequeño</Dropdown.Item>
-            <Dropdown.Item eventKey="Mediano" className="dropbutton">Mediano</Dropdown.Item>
-            <Dropdown.Item eventKey="Grande" className="dropbutton">Grande</Dropdown.Item>
-          </DropdownButton>}
+          {buttonDrop && (
+            <DropdownButton
+              id="dropdown-basic-button"
+              title="Tamaño"
+              onSelect={(eventKey) => setSelectedOption(eventKey)}
+            >
+              <Dropdown.Item eventKey="Pequeño" className="dropbutton">
+                Pequeño
+              </Dropdown.Item>
+              <Dropdown.Item eventKey="Mediano" className="dropbutton">
+                Mediano
+              </Dropdown.Item>
+              <Dropdown.Item eventKey="Grande" className="dropbutton">
+                Grande
+              </Dropdown.Item>
+            </DropdownButton>
+          )}
           {selectedOption && <h5>Opción seleccionada: {selectedOption}</h5>}
         </div>
         <br />
-        {miVariable ? 
+        {miVariable ? (
           <div className="content_store">
             <h5>Click nuevamente en confirmar</h5>
             <NavLink className="d-flex justify-content-center" to="/cart">
               <Button text="CONFIRMAR"></Button>
-            </NavLink> 
+            </NavLink>
           </div>
-          : <NavLink onClick={handleClick} className="d-flex justify-content-center">
-              <Button text="CONFIRMAR"></Button>
-            </NavLink> 
-        }
+        ) : (
+          <NavLink
+            onClick={handleClick}
+            className="d-flex justify-content-center"
+          >
+            <Button text="CONFIRMAR"></Button>
+          </NavLink>
+        )}
         <br />
       </Container>
       <Footer></Footer>

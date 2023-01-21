@@ -7,12 +7,12 @@ import "./css/Header.css"
 import img_arrow from "../../../assets/img/icons/back arrow.png"
 import logo from "../../../assets/img/logo/Logo_responsive.png";
 
-const Header = ({title, imgNav, NavDirection}) => {
+const Header = ({title, imgNav, NavDirection, Navlink}) => {
   return (
     <Navbar className='custom-Navbar' expand="lg">
       <Container>
-        <NavLink to="/product" className="img_arrow"><img src={img_arrow} alt="logo" /></NavLink>
-        <NavLink to="/" className="logo"><img src={logo} alt="logo" /></NavLink>
+        <NavLink to={Navlink} className="img_arrow"><img src={img_arrow} alt="logo" /></NavLink>
+        <NavLink to={Navlink} className="logo"><img src={logo} alt="logo" /></NavLink>
         <Nav className="me-auto name_section">
             <h1>{title}</h1>
         </Nav>

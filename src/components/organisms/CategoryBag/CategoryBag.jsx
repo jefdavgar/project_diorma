@@ -12,7 +12,7 @@ import imgcart from "../../../assets/img/icons/shopping_cart.png";
 const CategoryBag = () => {
   return (
     <>
-        <Header title="Colección" imgNav={imgcart} NavDirection="/cart"></Header>
+        <Header title="Colección" imgNav={imgcart} NavDirection="/cart" Navlink="/"></Header>
         <Container>
            <NavLink to="/product">
             <ButtonCategory text="Todo"></ButtonCategory>
