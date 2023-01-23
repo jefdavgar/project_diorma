@@ -18,6 +18,7 @@ const BagList = () => {
       imgProduct: perlas_azules,
       price: 10,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 2,
@@ -26,6 +27,7 @@ const BagList = () => {
       imgProduct: perlas_verdes,
       price: 20,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 3,
@@ -34,6 +36,7 @@ const BagList = () => {
       imgProduct: perlas_moradas,
       price: 30,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 4,
@@ -42,6 +45,7 @@ const BagList = () => {
       imgProduct: perlas_blancas,
       price: 40,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 5,
@@ -50,6 +54,7 @@ const BagList = () => {
       imgProduct: perlas_doradas,
       price: 50,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
   ]);
 

@@ -1,0 +1,14 @@
+.icon_delete{
+	display:block;
+}
+.icon-close{
+	display: none;
+}
+@media screen and (min-width:281px) {
+    .icon_delete{
+       display: none;
+    }
+	.icon-close{
+		display: block;
+	}
+}

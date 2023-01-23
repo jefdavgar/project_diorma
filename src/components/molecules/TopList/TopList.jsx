@@ -18,6 +18,7 @@ const TopList = () => {
       imgProduct: top_dorado,
       price: 10,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 7,
@@ -26,6 +27,7 @@ const TopList = () => {
       imgProduct: top_plateado,
       price: 20,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 8,
@@ -34,6 +36,7 @@ const TopList = () => {
       imgProduct: top_rosado,
       price: 30,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 9,
@@ -42,6 +45,7 @@ const TopList = () => {
       imgProduct: top_blanco,
       price: 40,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
   ]);
 

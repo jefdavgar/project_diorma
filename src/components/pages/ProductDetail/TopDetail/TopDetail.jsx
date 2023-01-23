@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../../organisms/Header/Header";
 import top_dorado from "../../../../assets/img/products/tops/dorado.jpg";
@@ -13,8 +13,8 @@ import Button from "../../../atom/Button/Button";
 import "./css/TopDetail.css";
 import Footer from "../../../organisms/Footer/Footer";
 import { NavLink } from "react-router-dom";
-
-const TopDetail = () => {
+import Cart from "../../Cart/Cart";
+const TopDetail = ({allProducts, setAllProducts}) => {
   const [products] = useState([
     {
       id: 6,
@@ -23,6 +23,7 @@ const TopDetail = () => {
       imgProduct: top_dorado,
       price: 10,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 7,
@@ -31,6 +32,7 @@ const TopDetail = () => {
       imgProduct: top_plateado,
       price: 20,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 8,
@@ -39,6 +41,7 @@ const TopDetail = () => {
       imgProduct: top_rosado,
       price: 30,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
     {
       id: 9,
@@ -47,6 +50,7 @@ const TopDetail = () => {
       imgProduct: top_blanco,
       price: 40,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      quantity: 1,
     },
   ]);
 
@@ -55,7 +59,6 @@ const TopDetail = () => {
   const [selectedOption, setSelectedOption] = useState("Ninguna");
   const [miVariable, setMiVariable] = useState(false);
   const [buttonDrop, setButtonDrop] = useState(true);
-
   const handleClick = (event) => {
     event.preventDefault();
     if (selectedOption === "Ninguna") {
@@ -68,9 +71,21 @@ const TopDetail = () => {
       if (confirmResult) {
         setButtonDrop(false);
         setMiVariable(true);
+        onAddProduct(product);
       }
     }
   };
+  const onAddProduct = (product)=>{
+    const isDuplicate = allProducts.find((p) => p.id === product.id);
+    if (isDuplicate) {
+        
+        return;
+    }
+    setAllProducts([...allProducts, product]);
+  }
+  console.log(allProducts);
+
+
   return (
     <>
       <Header
@@ -123,7 +138,7 @@ const TopDetail = () => {
         {miVariable ? (
           <div className="content_store">
             <h5>Click nuevamente en confirmar</h5>
-            <NavLink className="d-flex justify-content-center" to="/cart">
+            <NavLink onClick={()=>onAddProduct(product)} className="d-flex justify-content-center" to="/cart">
               <Button text="CONFIRMAR"></Button>
             </NavLink>
           </div>
