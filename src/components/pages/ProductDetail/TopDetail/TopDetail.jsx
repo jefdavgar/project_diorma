@@ -14,7 +14,12 @@ import "./css/TopDetail.css";
 import Footer from "../../../organisms/Footer/Footer";
 import { NavLink } from "react-router-dom";
 import Cart from "../../Cart/Cart";
-const TopDetail = ({allProducts, setAllProducts}) => {
+const TopDetail = ({allProducts,
+	setAllProducts,
+	countProducts,
+	setCountProducts,
+	total,
+	setTotal}) => {
   const [products] = useState([
     {
       id: 6,
@@ -81,7 +86,20 @@ const TopDetail = ({allProducts, setAllProducts}) => {
         
         return;
     }
-    setAllProducts([...allProducts, product]);
+    if (allProducts.find(item => item.id === product.id)) {
+			const products = allProducts.map(item =>
+				item.id === product.id
+					? { ...item, quantity: item.quantity + 1 }
+					: item
+			);
+			setTotal(total + product.price * product.quantity);
+			setCountProducts(countProducts + product.quantity);
+			return setAllProducts([...products]);
+		}
+    
+    setTotal(total + product.price * product.quantity);
+		setCountProducts(countProducts + product.quantity);
+		setAllProducts([...allProducts, product]);
   }
   console.log(allProducts);
 
