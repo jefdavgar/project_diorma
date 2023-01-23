@@ -6,7 +6,7 @@ Página de bienvenida con historia de la marca, productos destacados y opción p
 Página de colección de productos con filtro por categoria y opción de ver detalles del producto.
 Página de detalle del producto con descripción detallada y opción para agregar al carrito.
 Página de carrito donde se pueden ver los productos seleccionados, aumentar o disminuir la cantidad y finalizar la compra con enlace a una API de WhatsApp.
-##Tecnologías utilizadas
+## Tecnologías utilizadas
 React JSX
 React Router
 Bootstrap
