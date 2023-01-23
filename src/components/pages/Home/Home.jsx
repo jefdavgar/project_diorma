@@ -11,26 +11,26 @@ import Menu from "../../molecules/Menu/Menu";
 const Home = () => {
   return (
     <>
-        <Container>
         <a name="home"/>
+        <Container>
+        <a name="historia"/>
           <Menu></Menu>
           <Image src={imgDestacada} alt="top-destacado" className="top"></Image>
-          <a name="historia"/>
           <Container className="d-flex flex-column align-items-center">
+          <a name="descubre"/>
             <h2 className="title">Nuestra Historia</h2>
             <p className="paragraph">Diorma Bags fue fundado en plena pandemia por Zuley Girl, quien estaba motivada por la necesidad de ver a las mujeres con un estilo personal y único que las identificara. Con una gran pasión por la moda y la artesanía, decidió crear bolsos y tops únicos y elegantes que ayudaran a las mujeres a encontrar su estilo personal.</p>
           </Container>
-          <a name="descubre"/>
           <Container className="d-flex flex-column align-items-center">
+          <a name="productos"/>
             <h2 className="title">Descubre Diorma Bags</h2>
             <p className="paragraph">Diorma Bags es un emprendimiento dedicado a proporcionar valor significativo a las mujeres a través de bolsos y tops artesanales personalizados. Utilizamos perlas y piedras acrílicas de alta calidad para crear productos únicos y elegantes que se adaptan a los gustos personales de cada mujer.</p>
           </Container>
-          <a name="productos"/>
           <Container className="d-flex flex-column align-items-center">
+          <a name="colección"/>
             <h2 className="title">Productos Destacados</h2>
           </Container>
           <CarouselProduct></CarouselProduct>
-          <a name="colección"/>
           <Container className="d-flex flex-column align-items-center">
             <NavLink to="/products">
               <Button text="VER COLECCIÓN"></Button>
