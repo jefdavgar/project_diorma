@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Image } from "react-bootstrap";
+import { Container, Image, Modal } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Button from "../../atom/Button/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,6 +7,9 @@ import QuantityButton from "../../atom/QuantityButton/QuantityButton";
 import "./css/Cart.css";
 import Header from "../../organisms/Header/Header";
 import imglogo from "../../../assets/img/icons/store.png";
+import Footer from "../../organisms/Footer/Footer";
+import "./css/Cart.css";
+
 const Cart = ({
   allProducts,
   setAllProducts,
@@ -21,6 +24,37 @@ const Cart = ({
     setTotal(total - product.price * product.quantity);
     setCountProducts(countProducts - product.quantity);
     setAllProducts(results);
+  };
+
+
+  //whatsapp order message const message "Pole, soy Sidata[ pataria salicitar la siguiente orden a domicilio.
+
+  const handleShow = () => {
+    const data = [{
+      "totalPrice": total,
+      "products": allProducts
+    }];
+
+    const message = `Hola soy un cliente de diorma Bags, me gustaria solicitar la siguiente orden.
+    *----------------------------------*
+    *Datos del envio*:
+    *--------------------------------------------*
+  
+    *Productos*:
+    *--------------------------------------------*
+    ${data[0].products.map(
+      (item) =>
+        `
+    *Producto:* ${item.nameProduct}
+    *Especificaciones:* ${item.description}
+    *Valor unitario:* ${item.price}
+    *Cantidad de productos:* ${item.quantity}
+    `
+    )}
+    *--------------------------------------------*
+    *VALOR TOTAL DE LA ORDEN:* $ ${data[0].totalPrice}`;
+      const url = `https://api.whatsapp.com/send?phone=573223388603&text=${encodeURIComponent(message)}`;    
+       window.open(url, '_blank');
   };
 
   const onCleanCart = () => {
@@ -38,6 +72,14 @@ const Cart = ({
         Navlink="/product"
       ></Header>
       <>
+      <Modal
+        id="Modal"
+      >
+        <Modal.Body id="modal-body">
+         <img src={imglogo} id="Modal-image"/>
+         <NavLink to={"/"} onClick={() => clearStorage()}><Button variant="primary" id="modal-button">Regresar al inicio</Button></NavLink>
+        </Modal.Body>
+      </Modal>
         <div>
           <div>
             {allProducts.length ? (
@@ -58,12 +100,12 @@ const Cart = ({
                               </Container>
                               <Container className="d-flex align-items-center col col-7">
                                 <div className="row">
-                                  <h5 className="subtitle col col-12">
+                                  <h4 className="subtitle col col-12">
                                     {product.nameProduct}
-                                  </h5>
-                                  <h5 className="subtitle col col-12">
+                                  </h4>
+                                  <h4 className="subtitle col col-12">
                                     ${product.price}
-                                  </h5>
+                                  </h4>
                                   <QuantityButton
                                     allProducts={allProducts}
                                     setAllProducts={setAllProducts}
@@ -77,7 +119,10 @@ const Cart = ({
                                     }
                                   />
 
-                                  <div className="icon_delete">
+                                  <div
+                                    className="icon_delete"
+                                    onClick={() => onDeleteProduct(product)}
+                                  >
                                     <Button
                                       text="ELIMINAR"
                                       className="icon_delete"
@@ -108,16 +153,28 @@ const Cart = ({
                       ))}
                     </div>
 
-                    <div className="d-flex">
-                      <div className="cart-total">
-                        <h3>Total:</h3>
-                        <span className="total-pagar">${total}</span>
+                    <div className="informationCart">
+                      <div className="row">
+                        <h3 className="col col-6">Total:</h3>
+                        <h3 className="col col-6">${total}</h3>
                       </div>
-
-                      <button className="btn-clear-all" onClick={onCleanCart}>
-                        Vaciar Carrito
-                      </button>
+                      <NavLink onClick={onCleanCart}>
+                        <Button
+                          text="VACIAR"
+                          className="btn-clear-all"
+                        ></Button>
+                      </NavLink>
                     </div>
+                    <br />
+                    <div className="d-flex justify-content-center button-final" onClick={handleShow}>
+                    <Button text=" Enviar" variant="primary" id="send-order" onClick={handleShow}>
+             
+          </Button>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                   </Container>
                 ) : (
                   <p className="cart-empty">El carrito está vacío</p>
@@ -129,6 +186,9 @@ const Cart = ({
           </div>
         </div>
       </>
+      <div className="container-fluid footer-cart">
+        <Footer></Footer>
+      </div>
     </div>
   );
 };

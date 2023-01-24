@@ -4,6 +4,23 @@
 .icon-close{
 	display: none;
 }
+.informationCart{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.btn-clear-all{
+	background-color: var(--morado) !important;
+}
+.footer-cart{
+	position: fixed !important;
+	bottom: 0;
+	padding: 0px !important;
+}
+.button-final{
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+}
 @media screen and (min-width:281px) {
     .icon_delete{
        display: none;
@@ -11,4 +28,9 @@
 	.icon-close{
 		display: block;
 	}
+	.button-final{
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+		 margin-top: 0px;
+}
 }

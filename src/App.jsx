@@ -31,7 +31,19 @@ function App() {
               />
             }
           />
-          <Route path="/product/bagdetail/:id" element={<BagDetail />} />
+          <Route
+            path="/product/bagdetail/:id"
+            element={
+              <BagDetail
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}
+              />
+            }
+          />
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route

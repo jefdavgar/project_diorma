@@ -101,9 +101,6 @@ const TopDetail = ({allProducts,
 		setCountProducts(countProducts + product.quantity);
 		setAllProducts([...allProducts, product]);
   }
-  console.log(allProducts);
-
-
   return (
     <>
       <Header

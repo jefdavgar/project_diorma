@@ -1,11 +1,10 @@
 .container-content{
-    border: 1px solid black;
+    border: 1px solid var(--blanco);
     width: 98px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 14px;
     row-gap: 13px;
     background-color: var(--blanco);
 }
