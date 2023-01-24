@@ -9,7 +9,7 @@ import Header from "../../organisms/Header/Header";
 import imglogo from "../../../assets/img/icons/store.png";
 import Footer from "../../organisms/Footer/Footer";
 import "./css/Cart.css";
-
+import imgproduct2 from "../../../assets/img/logo/sinproductos.jpg"
 const Cart = ({
   allProducts,
   setAllProducts,
@@ -26,14 +26,15 @@ const Cart = ({
     setAllProducts(results);
   };
 
-
   //whatsapp order message const message "Pole, soy Sidata[ pataria salicitar la siguiente orden a domicilio.
 
   const handleShow = () => {
-    const data = [{
-      "totalPrice": total,
-      "products": allProducts
-    }];
+    const data = [
+      {
+        totalPrice: total,
+        products: allProducts,
+      },
+    ];
 
     const message = `Hola soy un cliente de diorma Bags, me gustaria solicitar la siguiente orden.
     *----------------------------------*
@@ -53,8 +54,10 @@ const Cart = ({
     )}
     *--------------------------------------------*
     *VALOR TOTAL DE LA ORDEN:* $ ${data[0].totalPrice}`;
-      const url = `https://api.whatsapp.com/send?phone=573223388603&text=${encodeURIComponent(message)}`;    
-       window.open(url, '_blank');
+    const url = `https://api.whatsapp.com/send?phone=573223388603&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
   };
 
   const onCleanCart = () => {
@@ -72,14 +75,16 @@ const Cart = ({
         Navlink="/product"
       ></Header>
       <>
-      <Modal
-        id="Modal"
-      >
-        <Modal.Body id="modal-body">
-         <img src={imglogo} id="Modal-image"/>
-         <NavLink to={"/"} onClick={() => clearStorage()}><Button variant="primary" id="modal-button">Regresar al inicio</Button></NavLink>
-        </Modal.Body>
-      </Modal>
+        <Modal id="Modal">
+          <Modal.Body id="modal-body">
+            <img src={imglogo} id="Modal-image" />
+            <NavLink to={"/"} onClick={() => clearStorage()}>
+              <Button variant="primary" id="modal-button">
+                Regresar al inicio
+              </Button>
+            </NavLink>
+          </Modal.Body>
+        </Modal>
         <div>
           <div>
             {allProducts.length ? (
@@ -166,10 +171,16 @@ const Cart = ({
                       </NavLink>
                     </div>
                     <br />
-                    <div className="d-flex justify-content-center button-final" onClick={handleShow}>
-                    <Button text=" Enviar" variant="primary" id="send-order" onClick={handleShow}>
-             
-          </Button>
+                    <div
+                      className="d-flex justify-content-center button-final"
+                      onClick={handleShow}
+                    >
+                      <Button
+                        text=" Enviar"
+                        variant="primary"
+                        id="send-order"
+                        onClick={handleShow}
+                      ></Button>
                     </div>
                     <br />
                     <br />
@@ -177,11 +188,30 @@ const Cart = ({
                     <br />
                   </Container>
                 ) : (
-                  <p className="cart-empty">El carrito está vacío</p>
+                  <Image
+                    src={imgproduct2}
+                    alt="No hay productos"
+                    className="imgProduct"
+                  ></Image>
                 )}
               </>
             ) : (
-              <p className="cart-empty">El carrito está vacío</p>
+              <div>
+                <br />
+                <NavLink to="/products" className="row">
+                  <div className="col col-6">
+                    <Button text="AGREGAR PRODUCTOS"></Button>
+                  </div>
+                </NavLink>
+                <Image
+                      src={imgproduct2}
+                      alt="No hay productos"
+                      className="imgProduct"
+                    ></Image>
+                    <br />
+                    <br />
+                    <br />
+              </div>
             )}
           </div>
         </div>
