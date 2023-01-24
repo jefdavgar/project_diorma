@@ -1,20 +1,14 @@
 # Diorma Bags
-Diorma Bags es una plataforma de comercio electrónico especializada en bolsos y tops artesanales personalizados. Utilizamos perlas y piedras acrílicas de alta calidad para crear bolsos únicos y elegantes que se adaptan a los gustos personales de cada mujer. Nuestra misión es ayudar a las mujeres a encontrar su estilo personal y al mismo tiempo apoyar a las mujeres cabezas de hogar a través de empleo y diversificando la cultura a través de nuestra marca.
+Diorma Bags is a specialized e-commerce platform for handmade and customized bags and tops. We use high-quality acrylic pearls and stones to create unique and elegant bags that fit the personal tastes of every woman. Our mission is to help women find their personal style while supporting working women through employment and diversifying culture through our brand.
 
-## Funcionalidades
-Página de bienvenida con historia de la marca, productos destacados y opción para ver la colección completa.
-Página de colección de productos con filtro por categoria y opción de ver detalles del producto.
-Página de detalle del producto con descripción detallada y opción para agregar al carrito.
-Página de carrito donde se pueden ver los productos seleccionados, aumentar o disminuir la cantidad y finalizar la compra con enlace a una API de WhatsApp.
-## Tecnologías utilizadas
-React JSX
-React Router
-Bootstrap
-CSS
-Atomic Design
-Vite
-## Despliegue
-Puedes visitar el sitio web en https://dancing-sunflower-c01e51.netlify.app/
+## Functionalities
+Welcome page with brand story, featured products and option to view the full collection. Product collection page with category filter and option to view product details. Product detail page with detailed description and option to add to cart. Cart page where selected products can be viewed, quantity can be increased or decreased and purchase can be completed with a link to a WhatsApp API.
 
-## Contribuidores
+## Used technologies
+React JSX React Router Bootstrap CSS Atomic Design Vite
+
+## Deployment
+You can visit the website at https://dancing-sunflower-c01e51.netlify.app/
+
+## Contributors
 Jeferson Camero
